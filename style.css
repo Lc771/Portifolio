@@ -1,0 +1,375 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    background-color: #F5F5F5;
+}
+
+aside {
+    width: 25%;
+    background-color: #BFEFFF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.foto_perfil img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-left: 25%;
+}
+
+h1 {
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+ul {
+    list-style: none;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+ul li {
+    font-size: 16px;
+    color: #333;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease; /* Transições suaves */
+    position: relative;
+    font-weight: 500; /* Aumenta o peso da fonte */
+    letter-spacing: 0.5px; /* Espaçamento entre letras */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra de texto leve */
+}
+
+ul li a {
+    text-decoration: none;
+    color: inherit; /* Herda a cor do li */
+}
+
+ul li:hover {
+    color: #007f7f; /* Cor de hover mais vibrante */
+    transform: translateX(5px) scale(1.05); /* Leve aumento no tamanho */
+}
+
+ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background-color: #005f73;
+    transition: width 0.3s ease; /* Transição suave */
+}
+
+ul li:hover::after {
+    width: 100%;
+}
+
+a svg {
+    width: 40px;
+    height: 40px;
+    margin-left: 40%;
+}
+
+section.inicio {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(fundo.png);
+    background-size: cover;
+}
+
+section.inicio h1 {
+    font-size: 48px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+section.inicio p {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+}
+
+.animate-slideUp {
+    animation: slideUp 1s ease-out;
+    opacity: 1;
+}
+
+
+#titulo {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideUp 1s ease-out forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+section.introducao{
+    width: 600px;
+    margin-left: 50px;
+}
+
+section.introducao p {
+    margin-top: 50px;
+    font-size: 24px;
+}
+
+section.habilidades{
+    width: 600px;
+    margin-left: 50px;
+}
+
+section.habilidades p {
+    margin-top: 50px;
+    font-size: 24px;
+}
+
+section.habilidades h2 ul li {
+    margin-top: 50px;
+    font-size: 24px;
+}
+
+section.projetos{
+    width: 600px;
+    margin-left: 50px;
+}
+
+section.projetos p{
+    font-size: 24px;
+    padding-top: 50px;
+}
+
+section.projetos ul li {
+    margin-top: 50px;
+    font-size: 24px;
+    text-align: left;
+}
+
+section.site img{
+    width: 400px;
+    height: 250px;
+    margin-top: 200px;
+    margin-left: 10px;
+    border-color: #333;
+    border: 3px solid #171919; 
+    padding: 5px;
+    background-color: #fff; 
+}
+
+section.site img:hover {
+    transform: scale(1.1);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 40px;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.contact-list li text{
+    padding-left: 20px;
+
+}
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.contact-form label {
+    margin: 5px 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #5A7D8C; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #4a6a6d; 
+}
+
+.linha-do-tempo {
+    width: 45%; 
+    padding: 20px;
+    margin-top: 70px;
+    margin-left: 20px;
+}
+
+.linha-do-tempo ul {
+    list-style-type: none; 
+    padding: 0;
+}
+
+.linha-do-tempo li {
+    margin: 10px 0;
+    padding-left: 15px; 
+    position: relative;
+    text-align: left;
+}
+
+.linha-do-tempo li:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px; 
+    width: 5px;
+    height: 5px;
+    background: #007BFF; 
+    border-radius: 50%; 
+}
+
+.voltar{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    section.inicio{
+        display: none;
+    }
+    aside.respnsivo{
+        width: 100%;
+    }
+    #side-bar-responsivo{
+        display: none;
+    }
+    section.introducao{
+       
+    }
+    .voltar{
+        display: flex;
+        left: 0
+    }
+    .intro-responsivo{
+        display: none
+    }
+    section.projetos ul li{
+        font-size: 18px
+    }
+    .site {
+       display: none;
+    }
+    .linha-do-tempo{
+        display: none;
+    }
+    ;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .dark-mode aside{
+    background-color: gray;
+    color: white;
+  }
+
+  .dark-mode .inicio{
+    background-color: black;
+    background-image: none;
+  }
